@@ -50,3 +50,11 @@
 .lightText {
   color: #666;
 }
+
+.tutorialText {
+  padding: 2px;
+  border: 2px dashed;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}

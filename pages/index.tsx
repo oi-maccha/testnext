@@ -1,16 +1,19 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
+import Link from "next/link";
+import Date from "../components/date";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
 export default function Home({
   allPostsData,
@@ -23,10 +26,14 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>私はペイギンです。これから銀行に行ってくるよ！</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          私はペイギンです。これから銀行に行ってくるよ！
+          <br />
+          言葉じゃなくJSONで挨拶したい方は
+          <Link href={`/api/hello`}>こちら</Link>
+        </p>
+        <p className={utilStyles.tutorialText}>
+          これはサンプルサイトです。<a href="https://nextjs.org/learn">このチュートリアル</a>を試したよ。
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -34,11 +41,11 @@ export default function Home({
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>

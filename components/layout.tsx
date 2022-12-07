@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'ペイギン';
+const name = "'-,ペイ🐧ギン.+'";
 export const siteTitle = 'ペイギンの銀行へレッツペイ';
 
 export default function Layout({ children, home }: { children: React.ReactNode, home?: boolean }) {
@@ -61,7 +61,7 @@ export default function Layout({ children, home }: { children: React.ReactNode, 
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link href="/">🔙 Back to home</Link>
         </div>
       )}
     </div>
