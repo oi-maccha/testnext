@@ -4,6 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+const basePath = process.env.BASE_URL_PATH ?? "";
 const name = "'-,ペイ🐧ギン.+'";
 export const siteTitle = 'ペイギンの銀行へレッツペイ';
 
@@ -30,7 +31,7 @@ export default function Layout({ children, home }: { children: React.ReactNode, 
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src={`${basePath}/images/profile.jpg`}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -43,7 +44,7 @@ export default function Layout({ children, home }: { children: React.ReactNode, 
             <Link href="/">
               <Image
                 priority
-                src="/images/profile.jpg"
+                src={`${basePath}/images/profile.jpg`}
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
