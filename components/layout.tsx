@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const basePath = process.env.BASE_URL_PATH ?? "";
+const basePath = process.env.NEXT_PUBLIC_BASE_URL_PATH ?? "";
 const name = "'-,ペイ🐧ギン.+'";
 export const siteTitle = 'ペイギンの銀行へレッツペイ';
 
