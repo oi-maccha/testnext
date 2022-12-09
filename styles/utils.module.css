@@ -58,3 +58,42 @@
   line-height: 1.2;
   text-align: center;
 }
+  
+.spbr {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .heading2Xl {
+    font-size: 1.75rem;
+  }
+
+  .headingXl {
+    font-size: 1.25rem;
+  }
+
+  .headingLg {
+    font-size: 1.25rem;
+  }
+
+  .headingMd {
+    font-size: 0.75rem;
+  }
+
+  .listItem {
+    margin: 0 0 1rem;
+  }
+  
+  .lightText {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  
+  .tutorialText {
+    font-size: 0.75rem;
+  }
+  
+  .spbr {
+    display: inline;
+  }
+}

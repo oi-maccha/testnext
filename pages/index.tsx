@@ -27,13 +27,17 @@ export default function Home({
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          私はペイギンです。これから銀行に行ってくるよ！
+          私はペイギンです。
+          <br className={utilStyles.spbr} />
+          これから銀行に行ってくるよ！
           <br />
           言葉じゃなくJSONで挨拶したい方は
           <Link href={`/api/hello`}>こちら</Link>
         </p>
         <p className={utilStyles.tutorialText}>
-          これはサンプルサイトです。<a href="https://nextjs.org/learn">このチュートリアル</a>を試したよ。
+          これはサンプルサイトです。
+          <br className={utilStyles.spbr} />
+          <a href="https://nextjs.org/learn">このチュートリアル</a>を試したよ。
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
