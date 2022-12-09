@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_URL_PATH ?? "";
 const name = "'-,ペイ🐧ギン.+'";
-export const siteTitle = 'ペイギンの銀行へレッツペイ';
+export const siteTitle = 'TestNext';
 
 export default function Layout({ children, home }: { children: React.ReactNode, home?: boolean }) {
   return (
