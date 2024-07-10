@@ -9,6 +9,7 @@ const nextConfig = {
     // 画像最適化：OFF（利用先を設定しないとVercel以外SSG不可）
     unoptimized: true,
   },
+  output: "export",
 }
 
 module.exports = nextConfig
